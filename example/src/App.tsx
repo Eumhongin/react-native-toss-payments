@@ -1,10 +1,13 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import TossPayment from 'react-native-toss-payments';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  return <View style={styles.container}></View>;
+  return (
+    <View style={styles.container}>
+      <Text>This is Test</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

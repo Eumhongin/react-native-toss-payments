@@ -13,7 +13,7 @@ import type { WebViewMessageEvent } from 'react-native-webview';
 type Props = {
   clientKey: string;
   payment: TossPaymentRequestDataTypes;
-  onLoading: (isLoading: boolean) => void;
+  onLoading?: (isLoading: boolean) => void;
   onApproveError: () => void;
   onApproveFailed: (e: TossPaymentFailMessageTypes) => void;
   onApproveSucceed: (e: TossPaymentApproveTypes) => void;
@@ -56,6 +56,9 @@ const PaymentContainer = ({
   const detectIsLoading = useCallback(
     (isLoading: boolean) => {
       console.log(isLoading);
+      if (!onLoading) {
+        return;
+      }
       onLoading(isLoading);
     },
     [onLoading]

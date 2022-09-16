@@ -1,5 +1,5 @@
-import { SafeAreaView } from 'react-native';
 import React from 'react';
+import { SafeAreaView } from 'react-native';
 import WebView, { WebViewMessageEvent } from 'react-native-webview';
 
 import { isAppUrl, isBlank, openPGApp } from '../../libs/libs';
@@ -73,7 +73,6 @@ const Payment = ({
           if (isAppUrl(url)) {
             console.log('앱 URL 입니다.');
             /* 3rd-party 앱 오픈 */
-            // console.log('3rd-party 앱 오픈');
             openPGApp(url).catch((e) => {
               // const { code, message } = e;
               console.log(e);

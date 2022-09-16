@@ -1,7 +1,7 @@
 {
   "name": "react-native-toss-payments",
   "version": "0.2.0",
-  "description": "test",
+  "description": "리액트 네이티브용 토스페이먼츠 결제 연동 라이브러리",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -32,8 +32,8 @@
   },
   "keywords": [
     "react-native",
-    "ios",
-    "android"
+    "toss",
+    "tosspayments"
   ],
   "repository": "https://github.com/Eumhongin/react-native-toss-payments",
   "author": "Eumhongin <collineum@gmail.com> (https://collineum.com)",
@@ -71,8 +71,8 @@
     "@types/react": "17.0.21"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0"
   },
   "jest": {
     "preset": "react-native",
@@ -120,7 +120,9 @@
           "trailingComma": "es5",
           "useTabs": false
         }
-      ]
+      ],
+      "no-unused-vars": 0,
+      "@typescript-eslint/no-unused-vars": 0
     }
   },
   "eslintIgnore": [
