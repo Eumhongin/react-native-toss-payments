@@ -23,12 +23,14 @@
 
 ```sh
 npm install react-native-toss-payments
+npm install react-native-webview
 ```
 
 or
 
 ```sh
 yarn add react-native-toss-payments
+yarn add react-native-webview
 ```
 
 ## 사용방법(Usage)
