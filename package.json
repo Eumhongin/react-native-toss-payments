@@ -1,6 +1,6 @@
 {
   "name": "react-native-toss-payments",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "리액트 네이티브용 토스페이먼츠 결제 연동 라이브러리",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
