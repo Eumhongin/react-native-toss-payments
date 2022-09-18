@@ -1,13 +1,26 @@
-import { View, Text } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import React from 'react';
+import TossPayment from 'react-native-toss-payments';
+import type { PaymentParamTypes } from 'example/src/navigation.stack.types';
+import { useRoute } from '@react-navigation/native';
 
-type Props = {};
+const Payment = () => {
+  const route = useRoute<PaymentParamTypes>();
 
-const Payment = (props: Props) => {
   return (
-    <View>
-      <Text>Payment</Text>
-    </View>
+    <SafeAreaView
+      style={{
+        flex: 1,
+      }}
+    >
+      <TossPayment
+        clientKey={route.params.clientKey}
+        payment={route.params.data}
+        onApproveError={() => {}}
+        onApproveFailed={() => {}}
+        onApproveSucceed={() => {}}
+      />
+    </SafeAreaView>
   );
 };
 

@@ -1,25 +1,8 @@
-import * as React from 'react';
+import React from 'react';
+import RootNavigation from './routes/RootNavigation';
 
-import { StyleSheet, Text, View } from 'react-native';
+const App = () => {
+  return <RootNavigation />;
+};
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>This is Test</Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'white',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
+export default App;
