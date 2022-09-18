@@ -26,8 +26,7 @@ const Payment = ({
 
           <script src="https://js.tosspayments.com/v1"></script>
         </head>
-        <body>       
-        응 결제 준비중이야~ 
+        <body>               
           <script>
             var clientKey = '${clientKey}'
             var tossPayments = TossPayments(clientKey) // 클라이언트 키로 초기화하기
@@ -62,7 +61,6 @@ const Payment = ({
         sharedCookiesEnabled={true}
         onShouldStartLoadWithRequest={(request) => {
           const { url, mainDocumentURL } = request;
-          console.log(url, mainDocumentURL);
           if (isBlank(url, mainDocumentURL)) {
             detectIsLoading(true);
             return true;
@@ -71,21 +69,11 @@ const Payment = ({
           detectIsLoading(false);
 
           if (isAppUrl(url)) {
-            console.log('앱 URL 입니다.');
             /* 3rd-party 앱 오픈 */
-            openPGApp(url).catch((e) => {
-              // const { code, message } = e;
-              console.log(e);
-              // callback({
-              //   imp_success: false,
-              //   error_code: code,
-              //   error_msg: message,
-              // });
-            });
+            openPGApp(url);
 
             return false;
           }
-          console.log('앱 URL 아닙니다.');
           return true;
         }}
       />

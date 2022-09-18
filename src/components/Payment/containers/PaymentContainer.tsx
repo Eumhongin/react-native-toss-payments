@@ -33,8 +33,6 @@ const PaymentContainer = ({
         e.nativeEvent.data
       ) as TossPaymentResultMessageTypes;
 
-      console.log(tossPaymentMessageFromWeb);
-
       // 웹뷰로 부터 성공 및 실패 둘중 아무것도 받지못했을떄.
       if (!tossPaymentMessageFromWeb.type) {
         onApproveError();
@@ -55,7 +53,6 @@ const PaymentContainer = ({
 
   const detectIsLoading = useCallback(
     (isLoading: boolean) => {
-      console.log(isLoading);
       if (!onLoading) {
         return;
       }
