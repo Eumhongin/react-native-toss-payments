@@ -30,6 +30,7 @@ const RootNavigation = () => {
           component={Payment}
           options={{
             title: '결제하기',
+            headerShown: false,
           }}
         />
       </Stack.Navigator>
