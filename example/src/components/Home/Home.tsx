@@ -93,7 +93,6 @@ const Home = () => {
               클라이언트키
             </Text>
             <TextInput
-              value="test_ck_YZ1aOwX7K8mzK4DJOYa3yQxzvNPG"
               onChangeText={onClientKeyTextChanged}
               placeholder="클라이언트키를 입력해주세요"
               placeholderTextColor={'#c6c6c6'}
@@ -111,6 +110,7 @@ const Home = () => {
         </View>
         <TouchableOpacity
           onPress={onPaymentPressed}
+          disabled={!clientKey}
           style={{
             height: 48,
             borderRadius: 8,
