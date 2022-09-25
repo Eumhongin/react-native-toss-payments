@@ -12,13 +12,14 @@
     <img src='https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white' />
     <img src='https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB' />
     <img 
-        src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:collineum@gmail.com"
+        src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:hongveloper@gmail.com"
         />
 
     
 </p>
 
 
+**이슈 및 피드백은 항상 환영합니다!**
 ## 설치방법(Installation)
 
 ```sh
@@ -62,6 +63,13 @@ import TossPayment from "react-native-toss-payments";
 | **`onApproveFailed`**  | 토스 결제 승인시 승인 실패 handle하는 함수입니다.  | true     | None    | **`(e:TossPaymentFailMessageTypes) => void`** |
 | **`onApproveSucceed`** | 토스 결제 승인시 승인 성공 handle하는 함수입니다. | true     | None    | **`(e:TossPaymentApproveTypes) => void`**     |
 
+## 주의사항
+![This is Tosspayment logic](https://static.tosspayments.com/docs/card-flow.png)
+> 토스페이먼츠의 모든 결제 과정중 **결제요청**상태만을 현재 버전에서 지원하고있습니다.
+> 이후 **승인 API** 요청부터는 `onApproveSucceed`통하여 개인 서버에서 처리해야합니다.
+
+자세한 로직은 [토스페이먼츠 결제가이드](https://docs.tosspayments.com/guides/windows/card)에서 확인해주세요!
+
 
 ## 라이센스(License)
 
@@ -70,3 +78,4 @@ import TossPayment from "react-native-toss-payments";
 ---
 
 Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+감사합니다 :)
