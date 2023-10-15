@@ -68,5 +68,5 @@ export const ANDROID_MARKET_PREFIX = 'market://details?id=';
 
 export const IOS_MARKET_PREFIX = 'https://apps.apple.com/app/';
 
-export const TOSS_CLIENT_KEY = 'test_ck_Wd46qopOB89zXQMayzK3ZmM75y0v';
-export const TOSS_SECRET_KEY = 'test_sk_jZ61JOxRQVE1g4bOo72VW0X9bAqw';
+export const TOSS_CLIENT_KEY = '';
+export const TOSS_SECRET_KEY = '';
